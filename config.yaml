@@ -4,7 +4,7 @@ app:
 
 logger:
   level: "debug"
-  filename: "D:/Golang/GoWebApp/log/web_app.log"
+  filename: "logs/web_app.logs"
   max_size: 200
   max_age: 30
   max_backups: 7
