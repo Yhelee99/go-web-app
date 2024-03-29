@@ -6,25 +6,25 @@ import (
 	"GoWebApp/logger"
 	"GoWebApp/routes"
 	"GoWebApp/settings"
-	"fmt"
+	"go.uber.org/zap"
 )
 
 func main() {
 
 	//1:初始化配置文件
 	if err := settings.Init(); err != nil {
-		fmt.Printf("初始化配置文件失败:%v\n", err)
+		zap.L().Debug("初始化配置文件失败:%v\n", zap.Error(err))
 		return
 	}
 
 	//2:初始化日志
 	if err := logger.Init(); err != nil {
-		fmt.Printf("初始化日志失败:%v\n", err)
+		zap.L().Debug("初始化日志失败:%v\n", zap.Error(err))
 		return
 	}
 	//3:初始化mysql
 	if err := mysql.Init(); err != nil {
-		fmt.Printf("初始化数据库失败:%v\n", err)
+		zap.L().Debug("初始化数据库失败:%v\n", zap.Error(err))
 		return
 	}
 
