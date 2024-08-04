@@ -12,7 +12,7 @@ logger:
 
 mysql:
   host: "localhost"
-  port: 668
+  port: ***
   username: "root"
   password: "123456"
   dbname: "db1"
@@ -21,7 +21,7 @@ mysql:
 
 redis:
   host: "127.0.0.1"
-  port: 669
+  port: ***
   password: ""
   db: 0
   poolsize: 100
